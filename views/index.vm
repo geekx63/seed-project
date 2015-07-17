@@ -1,0 +1,8 @@
+##头
+#parse("/head.vm")
+##主体
+  <!-- body start -->
+#parse("/mainBody.vm")
+  <!-- body end -->
+##尾
+#parse("/footer.vm")
