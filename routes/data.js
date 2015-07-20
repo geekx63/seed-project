@@ -8,7 +8,7 @@ var router = express.Router();
 
 /* GET restAPI data. */
 router.all('/*', function(req, res, next) {
-    var fileName = req.url.split('/').join('_')+'.mock';
+  var fileName = req.url.split('/').slice(1).join('_')+'.mock';//根据请求api获取对应文件名称
     console.log(fileName);
 
     var mockTpl = fs.readFileSync(mockPath+fileName).toString();
